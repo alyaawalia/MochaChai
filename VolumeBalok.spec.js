@@ -1,25 +1,18 @@
 import { expect } from "chai";
-import RumusVolumeBalok from "./VolumeBalok.js";
+import hitungVolumeBalok from "./VolumeBalok.js";
 
-describe('VolumeBalok', () => {
-    let rumusVolumeBalok
-
-    beforeEach(function () {
-        rumusVolumeBalok = new RumusVolumeBalok()
+describe('Volume Balok', function() {
+    it('Hitung volume balok dengan nilai positif', function() {
+        const volume = hitungVolumeBalok(2, 3, 4)
+        expect(volume).to.equal(24)
     })
 
-    it('Melemparkan error jika panjang, lebar, atau tinggi negatif', () => {
-        expect(() => hitungVolumeBalok(-4, 3, 2)).to.throw('Panjang, lebar, dan tinggi balok harus positif')
+    it('Hitung volume balok dengan salah satu nilai negatif', function() {
+        expect(() => hitungVolumeBalok(-2, 3, 4)).to.throw('Panjang, lebar, dan tinggi harus berupa bilangan positif')
+
     })
 
-    // it('Error jika salah satu nilai bersifat negatif', () => {
-    //         const volume = rumusVolumeKubus.hitungVolume(-4, 3, 2)
-    //         expect(volume).to.throw('Panjang, lebar, dan tinggi balok harus positif')
-    //     })
-    
-    // it('Menghitung volume balok nilai positif', () => {
-    //     const volume = rumusVolumeBalok.hitungVolume(4, 3, 2)
-    //     expect(volume).to.equal(24)
-    // })
+    it('Hitung volume balok dengan salah satu string', function() {
+        expect(() => hitungVolumeBalok('panjang', 3, 4)).to.throw('parameter tidak boleh string')
+    })
 })
-

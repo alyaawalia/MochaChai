@@ -1,7 +1,7 @@
 {
   "type": "module",
   "scripts": {
-    "test": "mocha VolumeBola.spec.js"
+    "test": "mocha VolumeBalok.spec.js"
   },
   "dependencies": {
     "chai": "^5.1.1",
