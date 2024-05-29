@@ -1,0 +1,25 @@
+CHAI.JS adalah Secara bahasa: sebuah pernyataan yang sangat kamu yakini benar
+Dalam konteks testing, Assertion digunakan untuk mendefinisikan output atau perilaku yang sesuai ekspektasi dari sebuah program
+
+BDD TESTING : Pendekatan dr sofware testing dimana qa / tester menulis test case menggunakan bahasa yg simple.
+--> Tujuannya agar org yg bahkan gapunya kemampuan teknis, dapat mengerti dengan test case yang ditulis.
+--> Biasanya BDD dikaitkan dengan bahasa Gherkin yg menggunakan given (precondition), when (test step), then (expected result)
+
+
+CHAI MEMILIKI BEBERAPA STYLE PENULISAN 
+1. Should
+2. Expect --> yg kita pakai 
+3. Assert
+
+chai memiliki bahasa penyambung seperti 'to.have' ini gada fungsinya tp buat nyambungin aja,
+disambung dengan fungsi sebenarnya. 'to.have' digunakan agar test case kita lebih mudah dibaca
+
+METHOD YANG SERING DIPAKAI DALAM CHAI
+1- .equal(val[, msg]) = Menguji apakah nilai/value dan tipe datanya sama menggunakan 
+2- .a(type[, msg]) = mengecek apakah value sama dengan tipe data yg di expect
+3- .empty = untuk mengecek apakah value yang diberikan kosong, baik itu string, array maupun object
+4- .include(val[, msg]) = untuk mengecek apakah sebuah string atau value ada dalam string, array, atau object
+                       * string expectnya hrs menyebutkan salah satu kata/karakter dr string yg dicari
+                       * array expectnya hrs menyebutkan salah satu value yg dimiliki oleh array tsb
+                       * object expextnya hrs menyebutkan properti dan valuenya
+5- .deep = memeriksa nilai objek secara menyeluruh

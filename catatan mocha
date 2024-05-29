@@ -1,0 +1,20 @@
+Mochajs adalah testing framework yg jalan diatas node.js dan di browser
+Salah satu sifatnya yaitu asynchronous, jenisnya yaitu simple dan fun
+
+Fungsi **/* dalam package mau test semua file didalam semua folder yang memiliki akhiran .spec.js
+
+ketika install mocha, describe() dan it() bisa dipakai tanpa perlu diimport
+describe() digunakan untuk menjelaskan story atau fitur yang mau ditest. menjelaskan testcasenya
+describe () bisa juga bersarang didalam describe yg lain. menjelaskan judul skenerionya
+it () digunakan untuk menuliskan expected result terhadap fitur yg mau ditest
+
+Mocha Hook = untuk setup precondition & bersih-bersih setelah test. ini bisa digunakan didalam function describe()
+1. before --> dijalankan sekali sebelum test pertama pada blok describe
+2. after --> dijalankan diakhir setelah test terakhir pada blok describe
+3. beforeEach --> dijalankan setiap sebelum it
+4. afterEach --> dijalankan setiap setelah it
+
+Manually controlling/Debugging test --> mengcontrol secara manual untuk test ketika
+Method ini bisa dimasukkan kedalam describe() dan it() function
+1. .skip() --> digunakan untuk skip sebuah test case
+2. .only() --> digunakan untuk mengabaikan semua test case kecuali test case yg ini
